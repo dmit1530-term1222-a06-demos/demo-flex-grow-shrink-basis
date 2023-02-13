@@ -1,0 +1,213 @@
+/* Colour Palette
+
+Red    #e24c3b
+White  #fbf3ef
+Blue   #0088e0
+
+*/
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: url('../img/pole-closeup-mobile.webp') center / cover no-repeat;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: 'Arvo', serif;
+}
+
+a {
+  display: block;
+}
+
+/* Mobile Layout */
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li:not(.logo) {
+  font-size: 1.5rem;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 925px) {
+  /* any content in this media condition is styled from ~320px to 925px */
+  /* Colour Palette
+  Red    #e24c3b
+  White  #fbf3ef
+  Blue   #0088e0
+
+  */
+  nav {
+    background-color: #fbf3ef;
+  }
+
+  nav ul li:nth-child(3),
+  nav ul li:nth-child(5) {
+    background-color: #e24c3b;
+  }
+
+  nav ul li:nth-child(2) {
+    background-color: #0088e0;
+  }
+
+  nav ul li a {
+    color: #222;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+} /** end of max-width query **/
+
+.logo {
+  order: -1;
+}
+
+.logo h1 {
+  padding: 0;
+}
+
+svg {
+  width: 5rem;
+  height: auto;
+  margin-top: 1rem;
+}
+
+svg path {
+  fill:#222;
+}
+
+/** main layout **/
+main > h2 {
+  font-size: 4rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #222;
+  letter-spacing: 0.1rem;
+  padding: 3rem 0;
+}
+
+section {
+  margin: 0 auto;
+}
+
+section img {
+  max-width: 4.5rem;
+  margin: 1rem auto;
+}
+
+.inner-container {
+  padding: 0 1rem;
+}
+
+.col {
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 0..5rem;
+  border: 0.1rem solid rgba(255,255,255,0.5);
+  padding: 2rem;
+  margin: 1rem auto;
+}
+
+.col p a {
+  background-color: #e24c3b;
+  color: #fbd3ef;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 0.3rem;
+  margin-top: 1.5rem
+}
+
+.col p a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 926px) {
+  body {
+    background: url('../img/pole-closeup.webp') center / cover no-repeat;
+  }
+
+  nav {
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    flex: 1 1 25%; /**shorthand*/
+    /* longhand
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 25%; */
+  }
+
+  nav ul li a {
+    color: #fbf3ef;
+    text-decoration: none;
+  }
+
+  .logo {
+    order: 0;
+    flex: 1 0 50%;
+  }
+
+  .logo a svg * {
+    fill: #fbf3ef;
+  }
+
+  main {
+    min-height: calc(100vh - 10.5625rem)
+  }
+
+  .inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col {
+    max-width: calc(100% / 2 - 2rem);
+    margin: 1rem;
+  }
+
+  .grow {
+    flex: 1 0 65%;
+  }
+
+  .shrink {
+    flex: 0 1 35%;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  nav ul,
+  .inner-container {
+    max-width: 75rem;
+    margin: auto;
+  }
+}
